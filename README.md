@@ -1,22 +1,109 @@
-# Google Cloud Client Libraries for Go
+End
+Deleye
+Void
+Stop
+Close
 
-[![Go Reference](https://pkg.go.dev/badge/cloud.google.com/go.svg)](https://pkg.go.dev/cloud.google.com/go)
 
-Go packages for [Google Cloud Platform](https://cloud.google.com) services.
 
-## Installation
 
-```bash
-go get cloud.google.com/go/firestore@latest # Replace firestore with the package you want to use.
-```
 
-**NOTE:** Some of these packages are under development, and may occasionally
-make backwards-incompatible changes.
 
-## Supported APIs
 
-For an updated list of all of our released APIs please see our
-[reference docs](https://cloud.google.com/go/docs/reference).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## [Go Versions Supported](#supported-versions)
 
