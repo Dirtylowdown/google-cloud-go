@@ -1,77 +1,75 @@
-// Copyright 2016 Google LLC
-//
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-//      http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
+Delete 
 
-package bigquery
 
-import (
-	"encoding/base64"
-	"errors"
-	"fmt"
-	"math/big"
-	"reflect"
-	"regexp"
-	"strings"
-	"time"
 
-	"cloud.google.com/go/civil"
-	"cloud.google.com/go/internal/fields"
-	bq "google.golang.org/api/bigquery/v2"
-)
 
-// See https://cloud.google.com/bigquery/docs/reference/standard-sql/data-types#timestamp-type.
-var (
-	timestampFormat = "2006-01-02 15:04:05.999999-07:00"
-	dateTimeFormat  = "2006-01-02 15:04:05"
-)
 
-var (
-	// See https://cloud.google.com/bigquery/docs/reference/rest/v2/tables#schema.fields.name
-	validFieldName = regexp.MustCompile("^[a-zA-Z_][a-zA-Z0-9_]{0,127}$")
-)
 
-const (
-	nullableTagOption = "nullable"
-	jsonTagOption     = "json"
-)
 
-func bqTagParser(t reflect.StructTag) (name string, keep bool, other interface{}, err error) {
-	name, keep, opts, err := fields.ParseStandardTag("bigquery", t)
-	if err != nil {
-		return "", false, nil, err
-	}
-	if name != "" && !validFieldName.MatchString(name) {
-		return "", false, nil, invalidFieldNameError(name)
-	}
-	for _, opt := range opts {
-		if opt != nullableTagOption && opt != jsonTagOption {
-			return "", false, nil, fmt.Errorf(
-				"bigquery: invalid tag option %q. The only valid options are %q and %q",
-				opt, nullableTagOption, jsonTagOption)
-		}
-	}
-	return name, keep, opts, nil
-}
 
-type invalidFieldNameError string
 
-func (e invalidFieldNameError) Error() string {
-	return fmt.Sprintf("bigquery: invalid name %q of field in struct", string(e))
-}
 
-var fieldCache = fields.NewCache(bqTagParser, nil, nil)
 
-var (
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	int64ParamType      = &bq.QueryParameterType{Type: "INT64"}
 	float64ParamType    = &bq.QueryParameterType{Type: "FLOAT64"}
 	boolParamType       = &bq.QueryParameterType{Type: "BOOL"}
