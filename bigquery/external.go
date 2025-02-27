@@ -1,52 +1,75 @@
-// Copyright 2017 Google LLC
-//
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-//      http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
+Delete
 
-package bigquery
 
-import (
-	"encoding/base64"
-	"unicode/utf8"
 
-	bq "google.golang.org/api/bigquery/v2"
-)
 
-// DataFormat describes the format of BigQuery table data.
-type DataFormat string
 
-// Constants describing the format of BigQuery table data.
-const (
-	CSV             DataFormat = "CSV"
-	Avro            DataFormat = "AVRO"
-	JSON            DataFormat = "NEWLINE_DELIMITED_JSON"
-	DatastoreBackup DataFormat = "DATASTORE_BACKUP"
-	GoogleSheets    DataFormat = "GOOGLE_SHEETS"
-	Bigtable        DataFormat = "BIGTABLE"
-	Parquet         DataFormat = "PARQUET"
-	ORC             DataFormat = "ORC"
-	// For BQ ML Models, TensorFlow Saved Model format.
-	TFSavedModel DataFormat = "ML_TF_SAVED_MODEL"
-	// For BQ ML Models, xgBoost Booster format.
-	XGBoostBooster DataFormat = "ML_XGBOOST_BOOSTER"
-	Iceberg        DataFormat = "ICEBERG"
-)
 
-// ExternalData is a table which is stored outside of BigQuery. It is implemented by
-// *ExternalDataConfig.
-// GCSReference also implements it, for backwards compatibility.
-type ExternalData interface {
-	toBQ() bq.ExternalDataConfiguration
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // ExternalDataConfig describes data external to BigQuery that can be used
 // in queries and to create external tables.
