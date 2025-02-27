@@ -1,16 +1,78 @@
-module cloud.google.com/go/chat
+Delete
+Edit
+End 
 
-go 1.23.0
 
-require (
-	github.com/googleapis/gax-go/v2 v2.14.1
-	google.golang.org/api v0.222.0
-	google.golang.org/genproto v0.0.0-20250122153221-138b5a5a4fd4
-	google.golang.org/genproto/googleapis/api v0.0.0-20250219182151-9fdb1cabc7b2
-	google.golang.org/genproto/googleapis/rpc v0.0.0-20250219182151-9fdb1cabc7b2
-	google.golang.org/grpc v1.70.0
-	google.golang.org/protobuf v1.36.5
-)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 require (
 	cloud.google.com/go/auth v0.14.1 // indirect
