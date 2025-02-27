@@ -1,43 +1,77 @@
-// Copyright 2015 Google LLC
-//
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-//      http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
+Delete 
 
-package bigquery
 
-import (
-	"context"
-	"errors"
-	"fmt"
-	"time"
 
-	"cloud.google.com/go/internal/trace"
-	"cloud.google.com/go/internal/uid"
-	bq "google.golang.org/api/bigquery/v2"
-)
 
-// QueryConfig holds the configuration for a query job.
-type QueryConfig struct {
-	// Dst is the table into which the results of the query will be written.
-	// If this field is nil, a temporary table will be created.
-	Dst *Table
 
-	// The query to execute. See https://cloud.google.com/bigquery/query-reference for details.
-	Q string
 
-	// DefaultProjectID and DefaultDatasetID specify the dataset to use for unqualified table names in the query.
-	// If DefaultProjectID is set, DefaultDatasetID must also be set.
-	DefaultProjectID string
-	DefaultDatasetID string
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	// TableDefinitions describes data sources outside of BigQuery.
 	// The map keys may be used as table names in the query string.
