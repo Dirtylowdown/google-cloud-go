@@ -1,4 +1,3 @@
-echo "Post Create Starting"
-
-go version
-go mod tidy
+delete
+enfd
+boid
